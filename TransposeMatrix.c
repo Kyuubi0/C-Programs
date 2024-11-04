@@ -31,7 +31,7 @@ printf("%d ",matrix[i][j]);
 printf("\n");
 }
 
-printf("simdi matrisinizin transpozesini verelim : \n");
+printf("Now let's transpose your matrix : \n");
 /*matrix transpose calculation*/
 for(i=0;i<a;i++){
 for(j=0;j<b;j++){
@@ -55,5 +55,5 @@ y=matrix[i][j];
 }
 }
 
-printf("en buyuk sayiniz : %d",y);
+printf("Your max number : %d",y);
 }
