@@ -1,46 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 void main(){
-int a,b,matris[10][10],transpoze[10][10],i,j,x,y;/* a satir, b sutun sayisi - i,j sayac - x deger atama aleti - y en buyuk sayi aleti*/
+int a,b,matrix[10][10],transpoze[10][10],i,j,x,y;/* a line, b column - i,j counter - x value assignment variable - y largest number variable*/
 x=0;
 y=0;
-printf("matrisinizin boyularini giriniz.\nsatir sayiniz? : ");
+printf("Enter the dimensions of your matrix.\nnumber of rows? : ");
 scanf("%d",&a);
 
-printf("sutun sayiniz? : ");
+printf("your column count? : ");
 scanf("%d",&b);
 
-printf("simdi sizden sirayla satir ve sutun degerlerini girmenizi isteyecegiz.\n\n");
-/*deger alma*/
+printf("Now we will ask you to enter the row and column values, respectively.\n\n");
+/*taking values*/
 for(j=0;j<b;j++){
-printf("%d. satirin degerlerinden basliyoruz.\n",j+1);
+printf("%d. We start from the values ​​of the line.\n",j+1);
 for(i=0;i<a;i++){
-printf("%d. degeri giriniz : ",i+1);
+printf("%d. value: ",i+1);
 scanf("%d",&x);
-matris[i][j]=x;
+matrix[i][j]=x;
 }
 }
 
-printf("matrisiniz : \n");
-/*matrisi ekrana yazdýrma*/
+printf("your matrix : \n");
+/*printing matrix to screen*/
 for(j=0;j<b;j++){
 for(i=0;i<a;i++){
-printf("%d ",matris[i][j]);
+printf("%d ",matrix[i][j]);
 }
 printf("\n");
 }
 
 printf("simdi matrisinizin transpozesini verelim : \n");
-/*matris transpoze hesaplama*/
+/*matrix transpose calculation*/
 for(i=0;i<a;i++){
 for(j=0;j<b;j++){
-transpoze[j][i]=matris[i][j];
+transpoze[j][i]=matrix[i][j];
 }
 }
-/*matris transpoze yazdýrma*/
+/*matrix transpose printing*/
 for(i=0;i<a;i++){
 for(j=0;j<b;j++){
 printf("%d ",transpoze[j][i]);
@@ -48,11 +46,11 @@ printf("%d ",transpoze[j][i]);
 printf("\n");
 }
 
-/* matrisin icindeki en buyuk sayiyi bulma */ 
+/* Finding the largest number in a matrix */ 
 for(j=0;j<b;j++){
 for(i=0;i<a;i++){
-if(matris[i][j]>y){
-y=matris[i][j];
+if(matrix[i][j]>y){
+y=matrix[i][j];
 }
 }
 }
