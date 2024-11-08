@@ -105,7 +105,7 @@ int main(){
     addLast(&myList, 30);
     addLast(&myList, 40);
 
-    print("Linked List: ");
+    printf("Linked List: ");
     printList(myList);
 
     //belirli bir elemanı silellim
